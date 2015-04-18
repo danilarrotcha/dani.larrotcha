@@ -1,8 +1,8 @@
-'use strict';
+	'use strict';
 
 module.exports = {
 	db: {
-		uri: 'mongodb://localhost/mean-dev',
+		uri: 'mongodb://localhost:27017',
 		options: {
 			user: '',
 			pass: ''
