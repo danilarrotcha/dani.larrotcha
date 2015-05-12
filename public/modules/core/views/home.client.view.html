@@ -1,94 +1,149 @@
-<section data-ng-controller="HomeController">
-	<div class="jumbotron text-center">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
-				<img alt="MEAN.JS" class="img-responsive text-center" src="modules/core/img/brand/logo.png" />
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			<p class="lead">
-				Open-Source Full-Stack Solution For MEAN Applications
-			</p>
-		</div>
-		<div class="row">
-			<p>
-				<a class="btn btn-primary btn-lg" href="http://meanjs.org" target="_blank">Learn more</a>
-			</p>
-		</div>
-	</div>
-	<div>
-		<h2>Congrats! You've configured and ran the sample application successfully.</h2>
-		<p>MEAN.JS is a web application boilerplate, which means you should start changing everything :-)</p>
-		<p>This sample application tracks users and articles.</p>
-		<ul>
-			<li>
-				Click
-				<em>Signup</em>
-				to get started.
-			</li>
-			<li>
-				Configure your app to work with your social accounts, by editing the
-				<em>/config/env/*.js</em>
-				files.
-			</li>
-			<li>
-				Edit your users module.
-			</li>
-			<li>
-				Add new CRUD modules.
-			</li>
-			<li>
-				Have fun...
-			</li>
-		</ul>
-	</div>
-	<div class="row">
-		<div class="col-md-3">
-			<h2>
-				<strong>M</strong>ongoDB
-			</h2>
-			<p><a target="_blank" href="http://mongodb.org/">MongoDB</a> is a database. MongoDB's <a target="_blank" href="http://docs.mongodb.org/manual/">great manual</a> is the place to get started with NoSQL and MongoDB.</p>
-		</div>
-		<div class="col-md-3">
-			<h2>
-				<strong>E</strong>xpress
-			</h2>
-			<p><a target="_blank" href="http://expressjs.com/"> Express</a> is an app server. Check out <a target="_blank" href="http://expressjs.com/4x/api.html">The ExpressJS API reference for more information</a> or <a target="_blank" href="http://stackoverflow.com/questions/8144214/learning-express-for-node-js">StackOverflow</a> for more info.</p>
-		</div>
-		<div class="col-md-3">
-			<h2>
-				<strong>A</strong>ngularJS
-			</h2>
-			<p>AngularJS is web app framework. <a target="_blank" href="http://angularjs.org/">Angular's website</a> offers a lot. The <a target="_blank" href="http://www.thinkster.io/">Thinkster Popular Guide</a> and <a target="_blank" href="https://egghead.io/">Egghead Videos</a> are great resources.</p>
-		</div>
-		<div class="col-md-3">
-			<h2>
-				<strong>N</strong>ode.js
-			</h2>
-			<p><a target="_blank" href="http://nodejs.org/">Node.js</a> is a web server. Node's website and this <a target="_blank" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js">stackOverflow thread</a> offer excellent starting points to get to grasps with node.</p>
-		</div>
-	</div>
-	<div class="well">
-		<h2>MEAN.JS Documentation</h2>
-		<p>
-			Once you're familiar with the foundation technology, check out the MEAN.JS Documentation:
-			<ul>
-				<li><a target="_blank" href="http://meanjs.org/docs.html">MEAN.JS Documentation</a>
-				</li>
-				<li><a target="_blank" href="http://meanjs.org/generator.html">Yeoman Generator</a>
-				</li>
-				<li><a target="_blank" href="http://meanjs.org/modules.html">Modules</a>
-				</li>
-				<li><a target="_blank" href="http://meanjs.org/changelog.html">Changelog</a>
-				</li>
-				<li><a target="_blank" href="http://meanjs.org/community.html">Community</a>
-				</li>
-				<li><a target="_blank" href="http://blog.meanjs.org">Blog</a>
-				</li>
-			</ul>
-		</p>
-	</div>
-	<br>Enjoy &amp; Keep Us Updated,
-	<br>The MEAN.JS Team.
-</section>
+<div data-ng-controller="HomeController">
+	<div class="section intro" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="inner_title">Software Developer</p>
+          <a class="anchorjs-link" href="#top"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section hero" id="featured">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 style="margin-right: 5rem">Seeking effectiveness, simplicity as base and perfection as an ideal.</h4>
+          <a class="button button-primary" href="/#!">Involve me!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr/>
+	 <div class="section hero">
+    <div ng-switch="currentOption" class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div ng-animate="'animate'" ng-repeat="option in options">
+            <div class="clickable option {{option.value}} button" ng-click="changeOption(option.value)">
+              <h2 class="hero-heading">{{option.text}}</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div ng-switch-when="solid">
+            <h1 class="value-multiplier">SOLID Principles</h1>
+            <h5 class="value-heading">Object Oriented Design Principles foundation</h5>
+            <p class="value-description">"These principles expose the dependency management aspects of OOD as opposed to the conceptualization and modeling aspects. This is not to say that OO is a poor tool for conceptualization of the problem space, or that it is not a good venue for creating models."</p>
+            <p> by Uncle Bob. </p>
+          </div>
+          <div ng-switch-when="clean_code">
+            <h1 class="value-multiplier">Clean Code</h1>
+            <h5 class="value-heading">Implementation technics</h5>
+            <p class="value-description">Clean code description here.</p>
+          </div>
+          <div ng-switch-when="xp_programming">
+            <h1 class="value-multiplier">XP Programming</h1>
+            <h5 class="value-heading">Agile development methodology</h5>
+            <p class="value-description">XP Programming description here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	 <div class="section last-section" id="professional_experience">
+    <div class="container">
+      <h3 class="section-heading">Professional Experience</h3>
+      <p class="section-description">I've being involved in great projects for different markets:</p>
+      <ul class="list-group">
+        <li class="list-group-item">
+          Tax and Accounting
+        </li>
+        <li class="list-group-item">
+          Travel Agencies
+        </li>
+        <li class="list-group-item">
+          Legal
+        </li>
+        <li class="list-group-item">
+          Public administration
+        </li>
+      </ul>
+      <p>
+        My main roles are as expert software developer applying software architecture, analysis, development, tech lead for big and small teams, tech coach and programming core, functional or infrastructural parts of the many applications.
+      </p>
+      <a class="button button-primary">Contact me</a>
+    </div>
+  </div>
+
+  <div class="section categories" id="tech_stack">
+    <div class="container">
+      <h3 class="section-heading">Technology Stack</h3>
+      <p class="section-description">My expertise is based on .Net based solutions. I'm continous increasing my expertise on: 
+      <ul class="list-unstyled">
+          <li>
+              WebForms, Razor, Markdown and other templating engines
+          </li>
+          <li>
+              Javascript, Html and CSS
+          </li>
+          <li>
+              Dojo, AngularJS, EmberJS and others
+          </li>
+          <li>
+              ASP.Net WebForms
+          </li>
+          <li>
+              ASP.Net MVC and Web API
+          </li>
+          <li>
+              Web Services and Rest Services
+          </li>
+          <li>
+              Distributing applications and integrating systems, nServiceBus and MassTransit
+          </li>
+          <li>
+              SQL, noSql Databases and queues persistencies
+          </li>
+      </ul>
+      </p>
+      <p>Node JS entusiast</p>
+      <div class="row">
+        <div class="one-third column">
+          <img class="u-max-full-width" alt="Azure Web Sites" src="/modules/core/img/brand/footer-grid/Azure Web Site.png">
+        </div>
+        <div class="one-third column">
+          <img class="u-max-full-width" alt="Cloud services" src="/modules/core/img/brand/footer-grid/cloud service.png">
+        </div>
+        <div class="one-third column">
+          <img class="u-max-full-width" alt="Team Foundation Service" src="/modules/core/img/brand/footer-grid/Team Foundation Service.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-third column">
+          <img class="u-max-full-width" alt="Microsoft Azure" src="/modules/core/img/brand/footer-grid/Microsoft Azure.png">
+        </div>
+        <div class="one-third column">
+          <img class="u-max-full-width" alt="Mobile services" src="/modules/core/img/brand/footer-grid/mobile services (feature).png">
+        </div>
+        <div class="one-third column">
+          <img class="u-max-full-width" alt="Service Bus" src="/modules/core/img/brand/footer-grid/Service Bus (feature).png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-third column">
+          <img class="u-max-full-width" alt="MeanJS" src="/modules/core/img/brand/footer-grid/meanjs.png">
+        </div>
+        <div class="one-third column">
+          <img class="u-max-full-width" alt="NodeJS" src="/modules/core/img/brand/footer-grid/node.png">
+        </div>
+        <div class="one-third column">
+          <img class="u-max-full-width" alt="Html5 Css3 Es5" src="/modules/core/img/brand/footer-grid/javascript_html_css.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer" style="text-align:center; background-color:#000; color:#fff;">
+    <p>Dani Larrotcha © 2015</p>
+  </footer>
+</div>

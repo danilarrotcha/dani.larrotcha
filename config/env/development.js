@@ -14,11 +14,8 @@ module.exports = {
 		// Stream defaults to process.stdout
 		// Uncomment to enable logging to a log on the file system
 		options: {
-			//stream: 'access.log'
+			stream: 'access.log'
 		}
-	},
-	app: {
-		title: 'MEAN.JS - Development Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
